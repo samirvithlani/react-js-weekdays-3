@@ -1,0 +1,36 @@
+						REACT JS <--> Library Framework
+
+Defination Framework : --> predefine architure is given and you have to just reuse that arch
+lightwe
+
+React js --> js
+
+business logic --> common logic
+
+SQL --> databse connection --> comman logic
+Query -->
+
+push display -->
+
+------------------------------------------------------------------------------------------------------
+JS -->
+
+ide -> vs code 
+----------------------------------------------------------
+
+node js -> node
+------------------------------------------------
+
+NPM --> .js -> function
+
+JAVA --> jdk --> jar java archives --> classes --> methods --> func
+
+--------------------------------------------------------
+HOW TO CREATE REACT JS PROJECT -->
+
+npx create-react-app learning
+
+SPA -->single page application -->index.html
+------------------------------
+
+Modu arch -->  product,user,cart
