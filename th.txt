@@ -46,3 +46,24 @@ Modu arch -->  product,user,cart
 2)context api
 
 3)redux
+=====================================================================
+09-08-2022
+validate radio button ->required... 
+1 radio default selected....
+
+checkbox -->
+------------
+min 2 check 
+=---------
+password
+min 8 char 1 ss,1 cap, 1 num, 
+------------
+drop down....
+
+coutry -> india -> state 
+
+
+
+
+
+

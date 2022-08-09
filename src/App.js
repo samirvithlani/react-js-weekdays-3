@@ -6,6 +6,7 @@ import { Content } from './components/Content';
 import { Employees } from './crud/Employees';
 import { FormDemo } from './crud/FormDemo';
 import { EmployeeRegistration } from './crud/EmployeeRegistration';
+import { StudentRegistration } from './forms/StudentRegistration';
 
 function App() {
 
@@ -23,8 +24,8 @@ function App() {
     <div className="App">
       <Header uName = {userName} email = {email}/>
       
-      <Employees/>
       
+      <StudentRegistration/>
       <Footer/>
     </div>
   );
