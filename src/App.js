@@ -15,6 +15,7 @@ import { Blog } from './components/Blog';
 import { ContactDetail } from './components/ContactDetail';
 import { Products } from './components/Products';
 import { ProductDetail } from './components/ProductDetail';
+import { UserApi } from './api/UserApi';
 
 function App() {
 
@@ -39,7 +40,7 @@ function App() {
           <Route path = "/products" element={<Products/>}></Route>
           <Route path = "/product/:id" element = {<ProductDetail/>}></Route>
       </Routes>
-
+<UserApi/>
       {/* <Header uName = {userName} email = {email}/>
       
       
