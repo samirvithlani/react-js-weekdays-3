@@ -41,7 +41,6 @@ export const UserApi = () => {
     <div>
       <button onClick={getApiData}>Get Api Data</button>
       {loader}
-      
       <button onClick={addApiData}>Add Api Data</button>
       <button onClick={deletData}>Delete Api Data</button>
       <button onClick={updateData}>Update Api Data</button>

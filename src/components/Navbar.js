@@ -29,6 +29,12 @@ export const Navbar = () => {
       <li class="nav-item">
         <Link class="nav-link " to="/products">Products</Link>
       </li>
+      <li class="nav-item">
+        <Link class="nav-link " to="/adddoctor">Add doctor</Link>
+      </li>
+      <li class="nav-item">
+        <Link class="nav-link " to="/viewdoctor">view  doctor</Link>
+      </li>
     </ul>
     
   </div>
