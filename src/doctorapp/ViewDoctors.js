@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 export const ViewDoctors = () => {
 
@@ -60,7 +61,12 @@ export const ViewDoctors = () => {
                             <td>{doc.dAge}</td>
                             <td>{doc.dEmail}</td>
                             <td>{doc.dExp}</td>
-                            <td><button onClick={()=>deleteDoctor(doc.dId)}>Delete</button></td>
+                            <td><button onClick={()=>deleteDoctor(doc.dId)}>Delete</button>
+                            <button>
+                              <Link to={`/updatedoctor/${doc.dId}`}>Update</Link>
+                            </button>
+                            </td>
+                            
                         </tr>
                     )
                 })

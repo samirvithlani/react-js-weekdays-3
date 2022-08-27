@@ -22,6 +22,7 @@ export const RegisterDoctor = () => {
     })
   }
 
+var naem = "sample"
 
   return (
     <div>
@@ -34,6 +35,7 @@ export const RegisterDoctor = () => {
             id="exampleInputEmail1"
             placeholder="Enter Name"
             {...register("dName")}
+            
           />
         </div>
         <div class="form-group">

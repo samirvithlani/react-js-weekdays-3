@@ -19,6 +19,7 @@ import { UserApi } from "./api/UserApi";
 import { RapiApi } from "./api/RapiApi";
 import { RegisterDoctor } from "./doctorapp/RegisterDoctor";
 import { ViewDoctors } from "./doctorapp/ViewDoctors";
+import { UpdateDoctor } from "./doctorapp/UpdateDoctor";
 
 function App() {
   var userName = "Harsh";
@@ -42,6 +43,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetail />}></Route>
         <Route path="/adddoctor" element={<RegisterDoctor />}></Route>
         <Route path="/viewdoctor" element={<ViewDoctors />}></Route>
+        <Route path="/updatedoctor/:id" element = {<UpdateDoctor/>}></Route>
       </Routes>
       
       {/* <Header uName = {userName} email = {email}/>
