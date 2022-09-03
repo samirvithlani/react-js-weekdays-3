@@ -1,2 +1,7 @@
 locastorage --> stirng object...
 use navigate in app.js
+hedae -->api -->user detail
+------------------------------
+
+tutorial search
+published...
