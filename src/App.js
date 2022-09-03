@@ -20,8 +20,13 @@ import { RapiApi } from "./api/RapiApi";
 import { RegisterDoctor } from "./doctorapp/RegisterDoctor";
 import { ViewDoctors } from "./doctorapp/ViewDoctors";
 import { UpdateDoctor } from "./doctorapp/UpdateDoctor";
-
+import { Storage } from "./components/Storage";
+import { ReadStore } from "./components/ReadStore";
+import { LoginDoctor } from "./components/LoginDoctor";
+import { useNavigate } from "react-router-dom";
 function App() {
+  var doctorId = localStorage.getItem("doctorid");
+  var navigate = useNavigate();
   var userName = "Harsh";
   var email = "harsh@gmail.com";
 
@@ -33,19 +38,26 @@ function App() {
   };
   return (
     <div className="App">
-      <Navbar />
+      
+      {/* <Storage/>
+      <ReadStore/> */}
+
       <Routes>
+        <Route path="/" element={<Navbar />} />
+        <Route path="/products" element={<Products />}></Route>
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contactdetail/:id/:name" element={<ContactDetail />} />
-        <Route path="/products" element={<Products />}></Route>
         <Route path="/product/:id" element={<ProductDetail />}></Route>
         <Route path="/adddoctor" element={<RegisterDoctor />}></Route>
         <Route path="/viewdoctor" element={<ViewDoctors />}></Route>
-        <Route path="/updatedoctor/:id" element = {<UpdateDoctor/>}></Route>
+        <Route path="/updatedoctor/:id" element={<UpdateDoctor />}></Route>
+        <Route path="/login" element={<LoginDoctor />}></Route>
+        <Route path="*" element = {<h1>404 Not Found</h1>}></Route>
+        {/* //<Route path="*" element = {<h1>404 Not Found</h1>}></Route> */}
       </Routes>
-      
+
       {/* <Header uName = {userName} email = {email}/>
       
       

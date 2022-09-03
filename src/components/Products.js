@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 export const Products = () => {
+  var navigate = useNavigate();
     var products = [
 
         {
@@ -18,7 +20,9 @@ export const Products = () => {
     ]
   return (
     <div>
+
         {
+          localStorage.getItem("doctorid")  ?
             products.map(product=>{
                 return (
                     <ul>
@@ -26,7 +30,7 @@ export const Products = () => {
                     </ul>
                 )
             })
-        }
+        :navigate("/login")}
 
 
 
