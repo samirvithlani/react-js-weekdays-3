@@ -24,6 +24,7 @@ import { Storage } from "./components/Storage";
 import { ReadStore } from "./components/ReadStore";
 import { LoginDoctor } from "./components/LoginDoctor";
 import { useNavigate } from "react-router-dom";
+import { Data } from "./contextdemo/Data";
 function App() {
   var doctorId = localStorage.getItem("doctorid");
   var navigate = useNavigate();
@@ -41,6 +42,7 @@ function App() {
       
       {/* <Storage/>
       <ReadStore/> */}
+    
 
       <Routes>
         <Route path="/" element={<Navbar />} />
@@ -57,6 +59,7 @@ function App() {
         <Route path="*" element = {<h1>404 Not Found</h1>}></Route>
         {/* //<Route path="*" element = {<h1>404 Not Found</h1>}></Route> */}
       </Routes>
+      <Data/>
 
       {/* <Header uName = {userName} email = {email}/>
       
