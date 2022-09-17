@@ -8,7 +8,13 @@ import { FormDemo } from "./crud/FormDemo";
 import { EmployeeRegistration } from "./crud/EmployeeRegistration";
 import { StudentRegistration } from "./forms/StudentRegistration";
 import { Navbar } from "./components/Navbar";
-import { Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
 import { Aboutus } from "./components/Aboutus";
 import { ContactUs } from "./components/ContactUs";
 import { Blog } from "./components/Blog";
@@ -26,6 +32,10 @@ import { LoginDoctor } from "./components/LoginDoctor";
 import { useNavigate } from "react-router-dom";
 import { Data } from "./contextdemo/Data";
 import { Json } from "./contextDemo2/Json";
+import { AppContext } from "./contextdemo/context";
+import ProtectedRoute from "./ProtectedRoute";
+import { MatrialDemo } from "./Material/MatrialDemo";
+
 function App() {
   var doctorId = localStorage.getItem("doctorid");
   var navigate = useNavigate();
@@ -38,29 +48,31 @@ function App() {
     email: "raj@gmail.com",
     class: "java",
   };
+
   return (
     <div className="App">
-      
       {/* <Storage/>
       <ReadStore/> */}
-    
 
       <Routes>
+        <Route element ={<ProtectedRoute/>}>
+          <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/blog" element={<Blog />} />
+        </Route>
         <Route path="/" element={<Navbar />} />
-        <Route path="/products" element={<Products />}></Route>
-        <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/blog" element={<Blog />} />
         <Route path="/contactdetail/:id/:name" element={<ContactDetail />} />
         <Route path="/product/:id" element={<ProductDetail />}></Route>
         <Route path="/adddoctor" element={<RegisterDoctor />}></Route>
         <Route path="/viewdoctor" element={<ViewDoctors />}></Route>
         <Route path="/updatedoctor/:id" element={<UpdateDoctor />}></Route>
         <Route path="/login" element={<LoginDoctor />}></Route>
-        <Route path="*" element = {<h1>404 Not Found</h1>}></Route>
+        <Route path="/loginuser" element={<Storage/>}></Route>
+        <Route path = "/material" element= {<MatrialDemo/>}></Route>
+        <Route path="*" element={<h1>404 Not Found</h1>}></Route>
+
         {/* //<Route path="*" element = {<h1>404 Not Found</h1>}></Route> */}
       </Routes>
-      <Json/>
 
       {/* <Header uName = {userName} email = {email}/>
       

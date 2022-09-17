@@ -5,3 +5,8 @@ hedae -->api -->user detail
 
 tutorial search
 published...
+
+
+slider with fees
+theam with switch accoording to user loggedin
+avatar login name...

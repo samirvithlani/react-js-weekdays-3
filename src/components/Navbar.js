@@ -65,10 +65,21 @@ export const Navbar = () => {
               </Link>
             </li>
             <li class="nav-item">
+              <Link class="nav-link " to="/loginuser">
+                LOGIN USER
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link " to="/material">
+                MATERIAL
+              </Link>
+            </li>
+            <li class="nav-item">
               <Link class="nav-link " to="/login">
                 login{" "}
               </Link>
             </li>
+
             <li class="nav-item">
               {
                 id? <h1>{id}</h1>:null 

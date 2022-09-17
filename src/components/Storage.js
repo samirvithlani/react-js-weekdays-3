@@ -12,10 +12,16 @@ export const Storage = () => {
     }
     
     const storeData = () =>{  
+      //
         localStorage.setItem("name",userName)
         localStorage.setItem("user",JSON.stringify(users))
         window.sessionStorage.setItem("email",email)
         alert("Data stored....")
+    }
+    const cleanData = () =>{
+          localStorage.clear();
+          sessionStorage.clear();
+        
     }
     
     
@@ -23,6 +29,7 @@ export const Storage = () => {
     <div>
         
         <button onClick={storeData}>Store Data</button>
+        <button onClick={cleanData}>Clean Data</button>
         
     </div>
   )
