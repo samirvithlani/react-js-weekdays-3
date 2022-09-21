@@ -10,3 +10,7 @@ published...
 slider with fees
 theam with switch accoording to user loggedin
 avatar login name...
+
+
+//alert with timeout
+//delete delete icon on alert
