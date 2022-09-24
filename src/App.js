@@ -35,6 +35,10 @@ import { Json } from "./contextDemo2/Json";
 import { AppContext } from "./contextdemo/context";
 import ProtectedRoute from "./ProtectedRoute";
 import { MatrialDemo } from "./Material/MatrialDemo";
+import { MaterailUISlider } from "./components/MaterailUISlider";
+import { MuiSlider } from "./components/MuiSlider";
+import { MuiTable } from "./components/MuiTable";
+import { MuiTable1 } from "./Material/MuiTable1";
 
 function App() {
   var doctorId = localStorage.getItem("doctorid");
@@ -53,6 +57,7 @@ function App() {
     <div className="App">
       {/* <Storage/>
       <ReadStore/> */}
+        
 
       <Routes>
         <Route element ={<ProtectedRoute/>}>
@@ -73,6 +78,7 @@ function App() {
 
         {/* //<Route path="*" element = {<h1>404 Not Found</h1>}></Route> */}
       </Routes>
+      <MuiTable1/>
 
       {/* <Header uName = {userName} email = {email}/>
       
