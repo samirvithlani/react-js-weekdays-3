@@ -39,6 +39,7 @@ import { MaterailUISlider } from "./components/MaterailUISlider";
 import { MuiSlider } from "./components/MuiSlider";
 import { MuiTable } from "./components/MuiTable";
 import { MuiTable1 } from "./Material/MuiTable1";
+import { Foods } from "./contextBackup/Foods";
 
 function App() {
   var doctorId = localStorage.getItem("doctorid");
@@ -57,7 +58,7 @@ function App() {
     <div className="App">
       {/* <Storage/>
       <ReadStore/> */}
-        
+        <Foods/>
 
       <Routes>
         <Route element ={<ProtectedRoute/>}>
