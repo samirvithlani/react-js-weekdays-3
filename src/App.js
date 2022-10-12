@@ -40,6 +40,7 @@ import { MuiSlider } from "./components/MuiSlider";
 import { MuiTable } from "./components/MuiTable";
 import { MuiTable1 } from "./Material/MuiTable1";
 import { Foods } from "./contextBackup/Foods";
+import { UserImpl } from "./query/UserImpl";
 
 function App() {
   var doctorId = localStorage.getItem("doctorid");
@@ -58,7 +59,7 @@ function App() {
     <div className="App">
       {/* <Storage/>
       <ReadStore/> */}
-        <Foods/>
+        
 
       <Routes>
         <Route element ={<ProtectedRoute/>}>
@@ -75,11 +76,12 @@ function App() {
         <Route path="/login" element={<LoginDoctor />}></Route>
         <Route path="/loginuser" element={<Storage/>}></Route>
         <Route path = "/material" element= {<MatrialDemo/>}></Route>
+        <Route path = "/userimpl" element = {<UserImpl/>}></Route>
         <Route path="*" element={<h1>404 Not Found</h1>}></Route>
 
         {/* //<Route path="*" element = {<h1>404 Not Found</h1>}></Route> */}
       </Routes>
-      <MuiTable1/>
+      
 
       {/* <Header uName = {userName} email = {email}/>
       

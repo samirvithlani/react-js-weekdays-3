@@ -75,6 +75,11 @@ export const Navbar = () => {
               </Link>
             </li>
             <li class="nav-item">
+              <Link class="nav-link " to="/userimpl">
+                Query
+              </Link>
+            </li>
+            <li class="nav-item">
               <Link class="nav-link " to="/login">
                 login{" "}
               </Link>
