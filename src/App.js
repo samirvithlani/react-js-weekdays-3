@@ -41,6 +41,7 @@ import { MuiTable } from "./components/MuiTable";
 import { MuiTable1 } from "./Material/MuiTable1";
 import { Foods } from "./contextBackup/Foods";
 import { UserImpl } from "./query/UserImpl";
+import { AddTutorialQueryImpls } from "./query/AddTutorialQueryImpls";
 
 function App() {
   var doctorId = localStorage.getItem("doctorid");
@@ -77,6 +78,7 @@ function App() {
         <Route path="/loginuser" element={<Storage/>}></Route>
         <Route path = "/material" element= {<MatrialDemo/>}></Route>
         <Route path = "/userimpl" element = {<UserImpl/>}></Route>
+        <Route path = "/addtutimpl" element = {<AddTutorialQueryImpls/>}></Route>
         <Route path="*" element={<h1>404 Not Found</h1>}></Route>
 
         {/* //<Route path="*" element = {<h1>404 Not Found</h1>}></Route> */}

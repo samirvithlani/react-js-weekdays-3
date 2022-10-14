@@ -1,5 +1,7 @@
 import axios from "axios";
-import {useQuery} from "react-query";
+import {useMutation, useQuery} from "react-query";
+import {useNavigate} from "react-router-dom";
+
 
 function fetchUserData (){
 
@@ -17,4 +19,25 @@ export const  useFetchData = () =>{
 
     });
 
+}
+
+function addTutorial(tutorial){
+
+    return axios.post("https://tutorialapi1.herokuapp.com/tutorial",tutorial)    
+}
+
+export const useAddTutorial = () =>{
+    const navigate = useNavigate();
+
+    return useMutation(addTutorial,{
+        onSuccess:(data,variable,context)=>{
+            console.log(data);
+            console.log("success")
+            navigate("/")
+        },
+        onError:()=>{
+
+            console.log("error")
+        }
+    })
 }
