@@ -42,6 +42,7 @@ import { MuiTable1 } from "./Material/MuiTable1";
 import { Foods } from "./contextBackup/Foods";
 import { UserImpl } from "./query/UserImpl";
 import { AddTutorialQueryImpls } from "./query/AddTutorialQueryImpls";
+import { Fileupload } from "./fileupload/Fileupload";
 
 function App() {
   var doctorId = localStorage.getItem("doctorid");
@@ -60,7 +61,7 @@ function App() {
     <div className="App">
       {/* <Storage/>
       <ReadStore/> */}
-        
+        <Fileupload/>
 
       <Routes>
         <Route element ={<ProtectedRoute/>}>

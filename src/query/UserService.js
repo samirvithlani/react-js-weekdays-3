@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 
 function fetchUserData (){
 
-    return axios.get("http://localhost:8080/tutorial")
+    return axios.get("https://reqres.in/api/users?page=2")
 
 }
 
