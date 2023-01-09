@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import axios from 'axios'
+import { AppContext } from "../contextdemo/context";
 
 export const RegisterDoctor = () => {
   var {
@@ -8,6 +9,8 @@ export const RegisterDoctor = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const {student,setst}= useContext(AppContext);
+  console.log(student);
 
   const submit = async(data)=>{
     console.log(data);

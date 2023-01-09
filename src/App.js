@@ -43,26 +43,31 @@ import { Foods } from "./contextBackup/Foods";
 import { UserImpl } from "./query/UserImpl";
 import { AddTutorialQueryImpls } from "./query/AddTutorialQueryImpls";
 import { Fileupload } from "./fileupload/Fileupload";
+import { SideBar } from "./SideBar";
+import { Children, useState } from "react";
+import { MuiSelect } from "./components/MuiSelect";
 
-function App() {
+
+function App(props) {
   var doctorId = localStorage.getItem("doctorid");
   var navigate = useNavigate();
   var userName = "Harsh";
   var email = "harsh@gmail.com";
 
-  var student = {
+  var   student = {
     name: "raj",
     age: "20",
     email: "raj@gmail.com",
     class: "java",
   };
-
+  const [st, setst] = useState('intial st')
   return (
     <div className="App">
       {/* <Storage/>
       <ReadStore/> */}
-        <Fileupload/>
+        <MuiSelect/>
 
+      <AppContext.Provider value ={{student,setst}}>
       <Routes>
         <Route element ={<ProtectedRoute/>}>
           <Route path="/aboutus" element={<Aboutus />} />
@@ -84,6 +89,8 @@ function App() {
 
         {/* //<Route path="*" element = {<h1>404 Not Found</h1>}></Route> */}
       </Routes>
+      
+      </AppContext.Provider>
       
 
       {/* <Header uName = {userName} email = {email}/>
