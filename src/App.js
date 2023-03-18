@@ -46,6 +46,7 @@ import { Fileupload } from "./fileupload/Fileupload";
 import { SideBar } from "./SideBar";
 import { Children, useState } from "react";
 import { MuiSelect } from "./components/MuiSelect";
+import { UserApp } from "./api/UserApp";
 
 
 function App(props) {
@@ -65,6 +66,7 @@ function App(props) {
     <div className="App">
       {/* <Storage/>
       <ReadStore/> */}
+      <UserApp/>
         <MuiSelect/>
 
       <AppContext.Provider value ={{student,setst}}>
