@@ -47,53 +47,54 @@ import { SideBar } from "./SideBar";
 import { Children, useState } from "react";
 import { MuiSelect } from "./components/MuiSelect";
 import { UserApp } from "./api/UserApp";
-
+import { ProductComp } from "./components/ProductComp";
 
 function App(props) {
+  console.log(process.env.REACT_APP_API_PATH);
+
   var doctorId = localStorage.getItem("doctorid");
   var navigate = useNavigate();
   var userName = "Harsh";
   var email = "harsh@gmail.com";
 
-  var   student = {
+  var student = {
     name: "raj",
     age: "20",
     email: "raj@gmail.com",
     class: "java",
   };
-  const [st, setst] = useState('intial st')
+  const [st, setst] = useState("intial st");
   return (
     <div className="App">
+      <ProductComp />
       {/* <Storage/>
       <ReadStore/> */}
-      <UserApp/>
-        <MuiSelect/>
+      {/* <UserApp/>
+        <MuiSelect/> */}
 
-      <AppContext.Provider value ={{student,setst}}>
-      <Routes>
-        <Route element ={<ProtectedRoute/>}>
-          <Route path="/aboutus" element={<Aboutus />} />
-          <Route path="/blog" element={<Blog />} />
-        </Route>
-        <Route path="/" element={<Navbar />} />
-        <Route path="/contactus" element={<ContactUs />} />
-        <Route path="/contactdetail/:id/:name" element={<ContactDetail />} />
-        <Route path="/product/:id" element={<ProductDetail />}></Route>
-        <Route path="/adddoctor" element={<RegisterDoctor />}></Route>
-        <Route path="/viewdoctor" element={<ViewDoctors />}></Route>
-        <Route path="/updatedoctor/:id" element={<UpdateDoctor />}></Route>
-        <Route path="/login" element={<LoginDoctor />}></Route>
-        <Route path="/loginuser" element={<Storage/>}></Route>
-        <Route path = "/material" element= {<MatrialDemo/>}></Route>
-        <Route path = "/userimpl" element = {<UserImpl/>}></Route>
-        <Route path = "/addtutimpl" element = {<AddTutorialQueryImpls/>}></Route>
-        <Route path="*" element={<h1>404 Not Found</h1>}></Route>
+      <AppContext.Provider value={{ student, setst }}>
+        <Routes>
+          <Route element={<ProtectedRoute />}>
+            <Route path="/aboutus" element={<Aboutus />} />
+            <Route path="/blog" element={<Blog />} />
+          </Route>
+          <Route path="/" element={<Navbar />} />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/contactdetail/:id/:name" element={<ContactDetail />} />
+          <Route path="/product/:id" element={<ProductDetail />}></Route>
+          <Route path="/adddoctor" element={<RegisterDoctor />}></Route>
+          <Route path="/viewdoctor" element={<ViewDoctors />}></Route>
+          <Route path="/updatedoctor/:id" element={<UpdateDoctor />}></Route>
+          <Route path="/login" element={<LoginDoctor />}></Route>
+          <Route path="/loginuser" element={<Storage />}></Route>
+          <Route path="/material" element={<MatrialDemo />}></Route>
+          <Route path="/userimpl" element={<UserImpl />}></Route>
+          <Route path="/addtutimpl" element={<AddTutorialQueryImpls />}></Route>
+          <Route path="*" element={<h1>404 Not Found</h1>}></Route>
 
-        {/* //<Route path="*" element = {<h1>404 Not Found</h1>}></Route> */}
-      </Routes>
-      
+          {/* //<Route path="*" element = {<h1>404 Not Found</h1>}></Route> */}
+        </Routes>
       </AppContext.Provider>
-      
 
       {/* <Header uName = {userName} email = {email}/>
       
